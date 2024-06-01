@@ -21,7 +21,7 @@ const characters = [
   {
     name: 'Kazuki',
     image: kazukiImage,
-    horoscope: 'Virgo',
+    horoscope: 'Taurus',
     personality: 'Analytical, kind, and a perfectionist',
     eyeColor: 'Onyx',
     hairColor: 'Black',
