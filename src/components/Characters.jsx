@@ -38,6 +38,7 @@ const Characters = () => {
       <div className="dropdown">
           <button className="dropbtn">Menu</button>
           <div className="dropdown-content">
+            <Link to="/">Home Page</Link>
             <Link to="/about">About Page</Link>
             <Link to="/game">Play Game</Link>
             <Link to="/characters">Characters Page</Link>
