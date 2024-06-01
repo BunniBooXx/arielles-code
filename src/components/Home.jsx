@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../home.css'; // Import the CSS file
+import '../responsive.css';
 import arielleImage from '../pettite.png'; // Ensure the image path is correct
 
 

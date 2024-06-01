@@ -4,6 +4,7 @@ import { Link } from'react-router-dom';
 import '../characters.css'; // Import the CSS file
 import arielleImage from '../arielle.png';
 import kazukiImage from '../kazuki.png';
+import '../responsive.css';
 
 // Sample character data
 const characters = [

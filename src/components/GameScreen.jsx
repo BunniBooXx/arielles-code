@@ -18,7 +18,8 @@ import arielle_kbbq_resturant from '../arielle-kbbq-resturant.png';
 import arielle_shrimp from '../arielle-shrimp.png';
 import kazuki_office_serious from '../kazuki-office-serious.png';
 import kazukiCherry from '../kazuki-cherry.png'
-import '../styles.css'
+import '../styles.css';
+import '../responsive.css';
 
 
 const scenes = [

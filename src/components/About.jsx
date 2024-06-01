@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../about.css';
+import '../responsive.css';
 import arielleBioImage from '../arielle_angry.png';
 
 const About = () => {

@@ -3,7 +3,6 @@
 .characters-container {
     text-align: center;
     background: linear-gradient(to right, #fce4ec, #e1bee7, #bbdefb); /* Light pink, purple, and blue gradient */
-    padding: 20px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -105,4 +104,21 @@
   .dropdown:hover .dropbtn {
     background-color: #ff4081; /* Darker pink color */
   }
+
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .characters-container {
+      padding: 20px;
+    }
   
+    .character-card {
+      max-width: 300px;
+      margin: 10px 0;
+    }
+  
+    .character-image {
+      max-width: 100%;
+      height: auto;
+    }
+  }

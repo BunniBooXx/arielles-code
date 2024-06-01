@@ -1,0 +1,75 @@
+/* responsive.css */
+
+/* Styles for screens smaller than 768px (e.g., mobile devices) */
+@media (max-width: 767px) {
+    /* Game Screen */
+    .game-screen {
+      height: auto;
+      min-height: 100vh;
+    }
+  
+    .character-image {
+      max-width: 50%;
+      bottom: 5%;
+    }
+  
+    .dialogue-box {
+      width: 90%;
+      padding: 10px;
+    }
+  
+    /* Home */
+    .home-container {
+      height: auto;
+      padding: 20px;
+    }
+  
+    .home-title {
+      font-size: 2em;
+      margin-right: 10px;
+    }
+  
+    .home-image {
+      max-width: 80%;
+    }
+  
+    .dropdown {
+      margin-top: 10px;
+    }
+  
+    /* Characters */
+    .characters-container {
+      padding: 20px;
+    }
+  
+    .character-card {
+      max-width: 100%;
+      margin: 10px 0;
+    }
+  
+    .character-image {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    /* About */
+    .about-container {
+      height: auto;
+      padding: 20px;
+    }
+  
+    .content-container {
+      flex-direction: column;
+    }
+  
+    .story-container,
+    .image-container {
+      max-width: 100%;
+      padding: 10px;
+    }
+  
+    .arielle-bio-image {
+      max-width: 100%;
+      height: auto;
+    }
+  }
