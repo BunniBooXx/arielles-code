@@ -17,16 +17,20 @@ import kazuki_cherry_longhair from '../kazuki-cherry-longhair.png';
 import arielle_kbbq_resturant from '../arielle-kbbq-resturant.png';
 import arielle_shrimp from '../arielle-shrimp.png';
 import kazuki_office_serious from '../kazuki-office-serious.png';
-import kazukiCherry from '../kazuki-cherry.png'
+import kazukiCherry from '../kazuki-cherry.png';
+import ariellePicnic from '../arielle-picnic-smiling.png';
+import kazukiPicnic from '../kazuki-picnic.png';
+import crane from '../crane.png';
+import arielleCrying from '../arielle-crying.png';
+
 import '../styles.css';
 import '../responsive.css';
 
 
 const scenes = [
-  { image: arielle_bed, dialogue: "Arielle woke up excited." },
-  { image: arielle_bed, dialogue: '"Todays the day!"' },
-  { image: arielle_bed, dialogue: "Todays the day that arielle is moving to Japan, as a software engineer." },
-  { image: arielle_bed, dialogue: "After she got dumped by her womanizer of a boyfriend she realized something..." },
+  { image: arielle_bed, dialogue: "Todays the day!" },
+  { image: crane, dialogue: "Todays the day that arielle is moving to Japan, as a software engineer." },
+  { image: arielleCrying, dialogue: "After she got dumped by her womanizer of a boyfriend she realized something..." },
   { image: arielle_bed, dialogue: "She was free! Free to do whatever she wanted! She realized she had no more ties to the US and could fullfill her childhood dream. " },
   { image: arielle_bed, dialogue: '"Time for a fresh start!"' },
   { image: arielle_smiling, dialogue: "I can't believe I'm finally in Tokyo! This is going to be an amazing adventure." },
@@ -47,8 +51,8 @@ const scenes = [
   { image: kazuki_kbbq_smiling , dialogue: "Haha,no thanks." },
   { image: kazuki_office_serious , dialogue: "Hey Arielle, I want to show you a cool view of Tokyo" },
   { image:picnic, dialogue: "I thought we could have a picnic in this beautiful park." },
-
-  { image:picnic, dialogue: "I thought we could have a picnic in this beautiful park." },
+  { image: ariellePicnic, dialogue: "wow its so beautiful here" },
+  { image: kazukiPicnic, dialogue: "Yeah I used to go here back when I was litle with my parents, want to take a walk?" },
   {
     image: kazukiCherry,
     dialogue: "Arielle, I have to be honest with you. I've developed feelings for you. Would you like to be my girlfriend?",

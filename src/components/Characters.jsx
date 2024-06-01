@@ -41,7 +41,6 @@ const Characters = () => {
             <Link to="/">Home Page</Link>
             <Link to="/about">About Page</Link>
             <Link to="/game">Play Game</Link>
-            <Link to="/characters">Characters Page</Link>
           </div>
         </div>
       <div className="characters-list">
