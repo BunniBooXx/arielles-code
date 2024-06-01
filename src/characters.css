@@ -1,0 +1,108 @@
+/* src/components/characters.css */
+
+.characters-container {
+    text-align: center;
+    background: linear-gradient(to right, #fce4ec, #e1bee7, #bbdefb); /* Light pink, purple, and blue gradient */
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  }
+  
+  .characters-title {
+    font-size: 3em;
+    color: #ff80ab; /* Pink color */
+    margin-bottom: 20px;
+  }
+  
+  .characters-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .character-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .character-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid #ff80ab;
+    display: block; /* Add this line */
+    margin: 0 auto; /* Add this line */
+  }
+  
+  .character-name {
+    font-size: 1.5em;
+    color: #ff80ab; /* Pink color */
+    margin-bottom: 10px;
+  }
+  
+  .character-detail {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropbtn {
+    background-color: #ff80ab; /* Pink color */
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 10px;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ff80ab; /* Pink color */
+    color: white;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: #ff4081; /* Darker pink color */
+  }
+  

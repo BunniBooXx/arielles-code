@@ -1,0 +1,8 @@
+/* src/styles.css */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 20px;
+  }
+  
