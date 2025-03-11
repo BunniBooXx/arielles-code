@@ -4,27 +4,26 @@ import { Link } from'react-router-dom';
 import DialogueBox from './DialogueBox';
 import NavigationButton from './NavigationButton';
 import '../gamescreen.css';
-import arielle_bed from '../arielle-bed.png';
-import arielle_smiling from '../arielle-smiling-teeth.png';
-import office from '../office.png';
-import kazuki_office_first from '../kazuki-office-first.png';
-import arielle_cafe from '../arielle-cafe.png';
-import kazuki_cafe from '../kazuki-cafe.png';
-import picnic from '../picnic.png';
-import kazuki_kbbq_smiling from '../kazuki-kbbq-smiling.png';
-import kazuki_cherry_happy from '../kazuki-cherry-happy.png';
-import kazuki_cherry_longhair from '../kazuki-cherry-longhair.png';
-import arielle_kbbq_resturant from '../arielle-kbbq-resturant.png';
-import arielle_shrimp from '../arielle-shrimp.png';
-import kazuki_office_serious from '../kazuki-office-serious.png';
-import kazukiCherry from '../kazuki-cherry.png';
-import ariellePicnic from '../arielle-picnic-smiling.png';
-import kazukiPicnic from '../kazuki-picnic.png';
-import crane from '../crane.png';
-import arielleCrying from '../arielle-crying.png';
+import arielle_bed from '../arielle-bed.webp';
+import arielle_smiling from '../arielle-smiling-teeth.webp';
+import office from '../office.webp';
+import kazuki_office_first from '../kazuki-office-first.webp';
+import arielle_cafe from '../arielle-cafe.webp';
+import kazuki_cafe from '../kazuki-cafe.webp';
+import picnic from '../picnic.webp';
+import kazuki_kbbq_smiling from '../kazuki-kbbq-smiling.webp';
+import kazuki_cherry_happy from '../kazuki-cherry-happy.webp';
+import kazuki_cherry_longhair from '../kazuki-cherry-longhair.webp';
+import arielle_kbbq_resturant from '../arielle-kbbq-resturant.webp';
+import arielle_shrimp from '../arielle-shrimp.webp';
+import kazuki_office_serious from '../kazuki-office-serious.webp';
+import kazukiCherry from '../kazuki-cherry.webp';
+import ariellePicnic from '../arielle-picnic-smiling.webp';
+import kazukiPicnic from '../kazuki-picnic.webp';
+import crane from '../crane.webp';
+import arielleCrying from '../arielle-crying.webp';
 
-import '../styles.css';
-import '../responsive.css';
+
 
 
 const scenes = [
@@ -68,50 +67,89 @@ const scenes = [
 const GameScreen = () => {
   const [currentScene, setCurrentScene] = useState(0);
   const [history, setHistory] = useState([]);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
-  const nextScene = (next) => {
+  const handleSceneTransition = (next) => {
+    setIsTransitioning(true);
     setHistory([...history, currentScene]);
-    if (next !== undefined) {
-      setCurrentScene(next);
-    } else if (currentScene < scenes.length - 1) {
-      setCurrentScene(currentScene + 1);
-    }
+    
+    setTimeout(() => {
+      if (next !== undefined) {
+        setCurrentScene(next);
+      } else if (currentScene < scenes.length - 1) {
+        setCurrentScene(currentScene + 1);
+      }
+      setIsTransitioning(false);
+    }, 300);
   };
 
-  const prevScene = () => {
-    const lastScene = history.pop();
-    setHistory(history);
-    if (lastScene !== undefined) {
-      setCurrentScene(lastScene);
+  const handlePreviousScene = () => {
+    if (history.length > 0) {
+      setIsTransitioning(true);
+      const lastScene = history.pop();
+      setHistory([...history]);
+      
+      setTimeout(() => {
+        setCurrentScene(lastScene);
+        setIsTransitioning(false);
+      }, 300);
     }
   };
 
   const current = scenes[currentScene];
 
   return (
-    <div className="game-screen">
-      <img src={current.image} alt="Scene" className="scene-image" />
-      <DialogueBox text={current.dialogue} />
-      <div className="button-container">
-        <NavigationButton onClick={() => prevScene()} text="Back" />
-        {current.choices ? (
-          current.choices.map((choice, index) => (
-            <NavigationButton
-              key={index}
-              onClick={() => nextScene(choice.nextScene)}
-              text={choice.text}
+    <div className="visual-novel">
+      <nav className="game-nav">
+        <h1 className="game-title">Arielle's Story</h1>
+        <div className="nav-menu">
+          <Link to="/" className="menu-button">
+            <span className="menu-icon">♥</span> Menu
+          </Link>
+        </div>
+      </nav>
+
+      <div className={`game-screen ${isTransitioning ? 'fade' : ''}`}>
+        <div className="scene-container">
+          <img 
+            src={current.image} 
+            alt="Scene" 
+            className="scene-image"
+            loading="lazy"
+          />
+        </div>
+
+        <div className="game-interface">
+          <DialogueBox text={current.dialogue} />
+          
+          <div className="button-container">
+            <NavigationButton 
+              onClick={handlePreviousScene} 
+              text="← Back" 
+              className="nav-button"
             />
-          ))
-        ) : (
-          <NavigationButton onClick={() => nextScene()} text="Next" />
-        )}
-        <Link to="/">
-          <NavigationButton text="Exit" />
-        </Link>
+            
+            {current.choices ? (
+              current.choices.map((choice, index) => (
+                <NavigationButton
+                  key={index}
+                  onClick={() => handleSceneTransition(choice.nextScene)}
+                  text={choice.text}
+                  className="choice-button"
+                />
+              ))
+            ) : (
+              <NavigationButton 
+                onClick={() => handleSceneTransition()} 
+                text="Next →" 
+                className="nav-button"
+              />
+            )}
+          </div>
+        </div>
       </div>
     </div>
   );
 };
 
 export default GameScreen;
-

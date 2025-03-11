@@ -1,61 +1,46 @@
-// src/components/Characters.jsx
 import React from 'react';
-import { Link } from'react-router-dom';
-import '../characters.css'; // Import the CSS file
-import arielleImage from '../arielle.png';
-import kazukiImage from '../kazuki.png';
-
-
-// Sample character data
-const characters = [
-  {
-    name: 'Arielle',
-    image: arielleImage,
-    horoscope: 'Scorpio',
-    personality: 'Brave, cheerful, and a bit stubborn',
-    eyeColor: 'Chestnut Brown',
-    hairColor: 'Copper Red',
-    highschoolDescription: 'Arielle was the star of the drama club, always in the spotlight.',
-    facts: 'Loves cats, dreams of traveling the world, and has a secret talent for singing.'
-  },
-  {
-    name: 'Kazuki',
-    image: kazukiImage,
-    horoscope: 'Taurus',
-    personality: 'Analytical, kind, and a perfectionist',
-    eyeColor: 'Onyx',
-    hairColor: 'Black',
-    highschoolDescription: 'Kazuki was the top student, known for his intellect and quiet nature.',
-    facts: 'Enjoys reading mystery novels, has a collection of vintage watches, and can play the piano.'
-  }
-  // Add more characters as needed
-];
+import '../characters.css';
+import arielleImage from '../arielle.webp';
+import kazukiImage from '../kazuki.webp';
 
 const Characters = () => {
   return (
     <div className="characters-container">
-      <h1 className="characters-title">Characters</h1>
-      <div className="dropdown">
-          <button className="dropbtn">Menu</button>
-          <div className="dropdown-content">
-            <Link to="/">Home Page</Link>
-            <Link to="/about">About Page</Link>
-            <Link to="/game">Play Game</Link>
+      <div className="characters-header">
+        <h1 className="characters-title">✧ Meet The Characters ✧</h1>
+        <div className="sparkle-divider">･ﾟ: *✧･ﾟ♡･ﾟ✧*:･ﾟ✧</div>
+      </div>
+      
+      <div className="character-grid">
+        <div className="character-card">
+          <div className="portrait-container">
+            <img src={arielleImage} alt="Arielle" className="portrait-image" />
+          </div>
+          <h2 className="character-name">Arielle</h2>
+          <div className="character-info">
+            <p><span className="info-label">✧ Star Sign:</span> Scorpio</p>
+            <p><span className="info-label">✧ Personality:</span> Brave & Cheerful</p>
+            <p><span className="info-label">✧ Eyes:</span> Chestnut Brown</p>
+            <p><span className="info-label">✧ Hair:</span> Copper Red</p>
+            <p><span className="info-label">✧ School Life:</span> Drama Club Star ★</p>
+            <p><span className="info-label">✧ Secret:</span> Hidden singing talent ♪</p>
           </div>
         </div>
-      <div className="characters-list">
-        {characters.map((character, index) => (
-          <div key={index} className="character-card">
-            <img src={character.image} alt={character.name} className="character-image" />
-            <h2 className="character-name">{character.name}</h2>
-            <p className="character-detail"><strong>Horoscope:</strong> {character.horoscope}</p>
-            <p className="character-detail"><strong>Personality:</strong> {character.personality}</p>
-            <p className="character-detail"><strong>Eye Color:</strong> {character.eyeColor}</p>
-            <p className="character-detail"><strong>Hair Color:</strong> {character.hairColor}</p>
-            <p className="character-detail"><strong>High School:</strong> {character.highschoolDescription}</p>
-            <p className="character-detail"><strong>Random Facts:</strong> {character.facts}</p>
+
+        <div className="character-card">
+          <div className="portrait-container">
+            <img src={kazukiImage} alt="Kazuki" className="portrait-image" />
           </div>
-        ))}
+          <h2 className="character-name">Kazuki</h2>
+          <div className="character-info">
+            <p><span className="info-label">✧ Star Sign:</span> Taurus</p>
+            <p><span className="info-label">✧ Personality:</span> Kind & Analytical</p>
+            <p><span className="info-label">✧ Eyes:</span> Onyx</p>
+            <p><span className="info-label">✧ Hair:</span> Black</p>
+            <p><span className="info-label">✧ School Life:</span> Top Student ★</p>
+            <p><span className="info-label">✧ Secret:</span> Piano prodigy ♪</p>
+          </div>
+        </div>
       </div>
     </div>
   );

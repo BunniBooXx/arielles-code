@@ -1,53 +1,120 @@
-/* characters.css */
 .characters-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background-image: linear-gradient(lightpink, lightblue,rgb(243, 161, 243));
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffd6e7 0%, #ffecf2 50%, #ffd6e7 100%);
+  padding: 40px 20px;
+}
+
+.characters-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.characters-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 4rem;
+  color: #ff4d8d;
+  text-shadow: 3px 3px 0 #fff,
+               -1px -1px 0 #fff,
+               1px -1px 0 #fff,
+               -1px 1px 0 #fff,
+               1px 1px 0 #fff;
+  margin-bottom: 15px;
+}
+
+.sparkle-divider {
+  font-size: 1.5rem;
+  color: #ff80ab;
+  margin: 20px 0;
+}
+
+.character-grid {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.character-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 30px;
+  padding: 30px;
+  width: 400px;
+  box-shadow: 0 10px 30px rgba(255, 77, 141, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.character-card:hover {
+  transform: translateY(-10px);
+}
+
+.portrait-container {
+  width: 280px;
+  height: 280px;
+  margin: 0 auto 25px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 6px solid #fff;
+  box-shadow: 0 5px 20px rgba(255, 77, 141, 0.3);
+  position: relative;
+}
+
+.portrait-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.5s ease;
+}
+
+.character-card:hover .portrait-image {
+  transform: scale(1.1);
+}
+
+.character-name {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+  color: #ff4d8d;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.character-info {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  padding: 20px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.info-label {
+  color: #ff4d8d;
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+  .characters-title {
+    font-size: 3rem;
   }
-  
-  .characters-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
+
   .character-card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px;
     padding: 20px;
-    margin: 20px;
-    max-width: 300px;
-    text-align: center;
   }
-  
-  .character-image {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 10px;
+
+  .portrait-container {
+    width: 220px;
+    height: 220px;
   }
-  
+
   .character-name {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 2.5rem;
   }
-  
-  .character-detail {
-    margin-bottom: 5px;
+
+  .character-info {
+    font-size: 1rem;
   }
-  
-  @media (max-width: 767px) {
-    .character-card {
-      max-width: 100%;
-      margin: 10px 0;
-    }
-  
-    .character-image {
-      width: 150px;
-      height: 150px;
-    }
-  }
+}

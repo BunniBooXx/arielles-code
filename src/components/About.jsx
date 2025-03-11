@@ -1,39 +1,40 @@
-// src/components/About.jsx
 import React from 'react';
-import { Link } from 'react-router-dom';
 import '../about.css';
-import '../responsive.css';
-import arielleBioImage from '../arielle_angry.png';
+import ariellePouty from '../arielle_angry.webp';
 
 const About = () => {
   return (
     <div className="about-container">
-      <div className="header-container">
-        <h1 className="about-title">About Arielle's Code</h1>
-        <div className="dropdown">
-          <button className="dropbtn">Menu</button>
-          <div className="dropdown-content">
-            <Link to="/">Home</Link>
-            <Link to="/game">Play Game</Link>
-            <Link to="/characters">Characters</Link>
+      <div className="about-content">
+        <div className="title-section">
+          <h1 className="about-title">✧ Arielle's Story ✧</h1>
+          <div className="title-decoration">･ﾟ: *✧･ﾟ♡･ﾟ✧*:･ﾟ✧</div>
+        </div>
+
+        <div className="content-wrapper">
+          <div className="story-section">
+            <div className="story-card">
+              <h2 className="story-heading">A Tale of Dreams & Code</h2>
+              <p className="story-text">
+                With a passion for otome games and a childhood dream of living in Japan, 
+                sprinkled with a bit of code... ✨
+              </p>
+              <p className="story-text">
+                Sugar, spice, and everything nice... That's how Arielle's Code was created! 🌸
+              </p>
+              <p className="story-text">
+                Join Arielle on her journey as she combines her creative spirit with technical magic 
+                to create immersive stories where YOUR choices shape the adventure! ♥
+              </p>
+            </div>
           </div>
-        </div>
-      </div>
-      <div className="content-container">
-        <div className="story-container">
-          <h2 className="story-title">Arielle's Story</h2>
-          <p className="story-text">
-            With a passion for otome games and a childhood dream of living in Japan , sprinkled with a bit of code. Sugar, spice and everything nice.
-          </p>
-          <p className="story-text">
-            That is how arielle's code was created! 
-          </p>
-          <p className="story-text">
-            With her unique blend of creativity and technical prowess, Arielle's Code was born – a revolutionary platform that allowed users to immerse themselves in richly detailed narratives, where their choices and actions shaped the course of the story.
-          </p>
-        </div>
-        <div className="image-container">
-          <img src={arielleBioImage} alt="Arielle Bio" className="arielle-bio-image" />
+
+          <div className="image-section">
+            <div className="image-frame">
+              <img src={ariellePouty} alt="Arielle being pouty" className="arielle-image" />
+            </div>
+            <div className="image-decoration">★ Coding with Attitude ★</div>
+          </div>
         </div>
       </div>
     </div>

@@ -1,10 +1,13 @@
-// src/components/CharacterImage.js
 import React from 'react';
+import '../character.css';
 
 const CharacterImage = ({ src, alt }) => {
   return (
-    <img src={src} alt={alt} className="character-image" />
+    <div className="character-portrait">
+      <img src={src} alt={alt} className="character-image" />
+    </div>
   );
 };
 
 export default CharacterImage;
+

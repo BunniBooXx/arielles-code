@@ -1,0 +1,88 @@
+.kawaii-footer {
+    width: 100%;
+    padding: 1.5rem 0;
+    background: linear-gradient(to right, #ffe6f0, #fff0f5, #ffe6f0);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .footer-content {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .footer-hearts {
+    font-size: 1.5rem;
+    color: #ff80ab;
+    margin-bottom: 0.5rem;
+    animation: bounce 2s infinite;
+  }
+  
+  .footer-text {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #ff4d8d;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    letter-spacing: 1px;
+  }
+  
+  .footer-sparkle {
+    display: inline-block;
+    color: #ff80ab;
+    margin: 0 0.5rem;
+    animation: twinkle 1.5s infinite;
+  }
+  
+  .footer-decoration {
+    margin-top: 0.5rem;
+  }
+  
+  .star, .heart {
+    display: inline-block;
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .star {
+    color: #ffb3d1;
+    animation: rotate 3s linear infinite;
+  }
+  
+  .heart {
+    color: #ff4d8d;
+    animation: pulse 2s ease infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+  
+  @keyframes twinkle {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+  
+  @keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  
+  @media (max-width: 768px) {
+    .footer-text {
+      font-size: 0.9rem;
+      padding: 0 1rem;
+    }
+    
+    .footer-hearts {
+      font-size: 1.2rem;
+    }
+  }
+  
